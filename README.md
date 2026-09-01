@@ -1,4 +1,4 @@
-# WorkFlow Pro, Test Automation
+# Bynry Assignment, Test Automation
 
 Test automation for a multi tenant B2B project management SaaS: API, web, mobile and tenant isolation, built with pytest and Playwright, with BrowserStack for real devices.
 
