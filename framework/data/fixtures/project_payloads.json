@@ -1,0 +1,14 @@
+{
+  "valid": [
+    {"case": "minimal", "payload": {"name": "Minimal Project", "description": "", "team_members": []}},
+    {"case": "with members", "payload": {"name": "Staffed Project", "description": "Two people assigned", "team_members": ["manager@company1.com", "employee@company1.com"]}},
+    {"case": "unicode name", "payload": {"name": "Проект Ω 2026", "description": "Non latin name", "team_members": []}}
+  ],
+  "invalid": [
+    {"case": "empty name", "payload": {"name": "", "description": "no name", "team_members": []}, "expected_status": 422},
+    {"case": "name over 200 chars", "payload": {"name": "x", "repeat_name": 260, "description": "too long", "team_members": []}, "expected_status": 422},
+    {"case": "name missing", "payload": {"description": "no name key", "team_members": []}, "expected_status": 422},
+    {"case": "members not a list", "payload": {"name": "Bad Members", "description": "", "team_members": "manager@company1.com"}, "expected_status": 422},
+    {"case": "unknown member email", "payload": {"name": "Ghost Member", "description": "", "team_members": ["nobody@company9.com"]}, "expected_status": 422}
+  ]
+}

@@ -1,0 +1,6 @@
+artifacts/
+.auth/
+allure-results/
+__pycache__/
+.pytest_cache/
+.env

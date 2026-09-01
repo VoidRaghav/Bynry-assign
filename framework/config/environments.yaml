@@ -1,0 +1,32 @@
+defaults: &defaults
+  web_url_template: "https://{subdomain}.{domain}"
+  action_timeout_ms: 15000
+  navigation_timeout_ms: 45000
+  expect_timeout_ms: 20000
+  api_timeout_s: 20
+  block_third_party: true
+
+local:
+  <<: *defaults
+  domain: workflowpro.localhost:3000
+  api_base_url: "http://api.workflowpro.localhost:3000"
+  web_url_template: "http://{subdomain}.{domain}"
+
+demo:
+  <<: *defaults
+  domain: 127.0.0.1:8080
+  api_base_url: "http://127.0.0.1:8080"
+  web_url_template: "http://{domain}/t/{subdomain}"
+  block_third_party: false
+
+staging:
+  <<: *defaults
+  domain: staging.workflowpro.com
+  api_base_url: "https://api.staging.workflowpro.com"
+
+production:
+  <<: *defaults
+  domain: workflowpro.com
+  api_base_url: "https://api.workflowpro.com"
+  action_timeout_ms: 20000
+  navigation_timeout_ms: 60000

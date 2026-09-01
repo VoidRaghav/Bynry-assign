@@ -1,0 +1,52 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.9.6, pytest-8.4.2, pluggy-1.6.0 -- /private/tmp/claude-501/-Users-raghav-Desktop-Bynry-assign/9f7adf00-733d-4e1d-956a-e10c07c10f67/scratchpad/venv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.9.6', 'Platform': 'macOS-26.6-arm64-arm-64bit', 'Packages': {'pytest': '8.4.2', 'pluggy': '1.6.0'}, 'Plugins': {'xdist': '3.8.0', 'metadata': '3.1.1', 'html': '4.2.0', 'rerunfailures': '16.0.1', 'base-url': '2.1.0', 'playwright': '0.7.1'}, 'Base URL': ''}
+rootdir: /Users/raghav/Desktop/Bynry-assign
+configfile: pytest.ini
+testpaths: framework/tests, part1_flaky_login
+plugins: xdist-3.8.0, metadata-3.1.1, html-4.2.0, rerunfailures-16.0.1, base-url-2.1.0, playwright-0.7.1
+collecting ... collected 27 items
+
+framework/tests/api/test_project_validation.py::test_accepted_payloads_create_a_project[minimal] PASSED [  3%]
+framework/tests/api/test_project_validation.py::test_accepted_payloads_create_a_project[with members] PASSED [  7%]
+framework/tests/api/test_project_validation.py::test_accepted_payloads_create_a_project[unicode name] PASSED [ 11%]
+framework/tests/api/test_project_validation.py::test_rejected_payloads_never_create_a_project[empty name] PASSED [ 14%]
+framework/tests/api/test_project_validation.py::test_rejected_payloads_never_create_a_project[name over 200 chars] PASSED [ 18%]
+framework/tests/api/test_project_validation.py::test_rejected_payloads_never_create_a_project[name missing] PASSED [ 22%]
+framework/tests/api/test_project_validation.py::test_rejected_payloads_never_create_a_project[members not a list] PASSED [ 25%]
+framework/tests/api/test_project_validation.py::test_rejected_payloads_never_create_a_project[unknown member email] PASSED [ 29%]
+framework/tests/api/test_projects_api.py::test_created_project_shows_up_in_the_list PASSED [ 33%]
+framework/tests/api/test_projects_api.py::test_call_without_tenant_header_is_refused PASSED [ 37%]
+framework/tests/api/test_projects_api.py::test_creation_follows_the_role_matrix[admin-201] PASSED [ 40%]
+framework/tests/api/test_projects_api.py::test_creation_follows_the_role_matrix[manager-201] PASSED [ 44%]
+framework/tests/api/test_projects_api.py::test_creation_follows_the_role_matrix[employee-403] PASSED [ 48%]
+framework/tests/integration/test_project_creation_flow.py::test_project_creation_flow[chromium] PASSED [ 51%]
+framework/tests/integration/test_project_creation_flow.py::test_project_reads_on_each_handset[chromium-iPhone 15 / iOS 17] PASSED [ 55%]
+framework/tests/web/test_login.py::test_every_role_lands_on_its_dashboard[chromium-admin] PASSED [ 59%]
+framework/tests/web/test_login.py::test_wrong_password_keeps_the_user_on_login[chromium] PASSED [ 62%]
+framework/tests/web/test_login.py::test_dashboard_is_usable_on_a_handset[chromium] PASSED [ 66%]
+part1_flaky_login/test_login_fixed.py::test_admin_lands_on_dashboard[chromium] PASSED [ 70%]
+part1_flaky_login/test_login_fixed.py::test_tenant_only_sees_its_own_projects[chromium] PASSED [ 74%]
+framework/tests/security/test_tenant_isolation.py::test_other_tenant_cannot_read_the_project[admin] PASSED [ 77%]
+framework/tests/security/test_tenant_isolation.py::test_other_tenant_cannot_read_the_project[employee] PASSED [ 81%]
+framework/tests/security/test_tenant_isolation.py::test_other_tenant_cannot_delete_the_project PASSED [ 85%]
+framework/tests/security/test_tenant_isolation.py::test_swapping_the_tenant_header_does_not_grant_access PASSED [ 88%]
+framework/tests/security/test_tenant_isolation.py::test_project_list_never_mixes_tenants PASSED [ 92%]
+framework/tests/web/test_login.py::test_every_role_lands_on_its_dashboard[chromium-manager] PASSED [ 96%]
+framework/tests/web/test_login.py::test_every_role_lands_on_its_dashboard[chromium-employee] PASSED [100%]
+
+=============================== warnings summary ===============================
+../../../../private/tmp/claude-501/-Users-raghav-Desktop-Bynry-assign/9f7adf00-733d-4e1d-956a-e10c07c10f67/scratchpad/venv/lib/python3.9/site-packages/urllib3/__init__.py:35
+  /private/tmp/claude-501/-Users-raghav-Desktop-Bynry-assign/9f7adf00-733d-4e1d-956a-e10c07c10f67/scratchpad/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+    warnings.warn(
+
+framework/tests/integration/test_project_creation_flow.py::test_project_creation_flow[chromium]
+framework/tests/integration/test_project_creation_flow.py::test_project_reads_on_each_handset[chromium-iPhone 15 / iOS 17]
+  /Users/raghav/Desktop/Bynry-assign/framework/conftest.py:141: UserWarning: iPhone 15 / iOS 17 is emulated, real device coverage needs BrowserStack credentials
+    warnings.warn(f"{target['name']} is emulated, real device coverage needs BrowserStack credentials")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+--- generated xml file: /Users/raghav/Desktop/Bynry-assign/reports/junit.xml ---
+- Generated html report: file:///Users/raghav/Desktop/Bynry-assign/reports/report.html -
+======================== 27 passed, 3 warnings in 6.70s ========================

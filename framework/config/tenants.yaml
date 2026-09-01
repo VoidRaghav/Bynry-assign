@@ -1,0 +1,36 @@
+company1:
+  id: "1001"
+  subdomain: company1
+  label: Company1
+  plan: enterprise
+  cold_start: false
+  users:
+    admin:
+      email: admin@company1.com
+      password_env: COMPANY1_ADMIN_PASSWORD
+      totp_secret_env: COMPANY1_ADMIN_TOTP
+      display_name: Priya Admin
+    manager:
+      email: manager@company1.com
+      password_env: COMPANY1_MANAGER_PASSWORD
+      display_name: Rahul Manager
+    employee:
+      email: employee@company1.com
+      password_env: COMPANY1_EMPLOYEE_PASSWORD
+      display_name: Neha Employee
+
+company2:
+  id: "1002"
+  subdomain: company2
+  label: Company2
+  plan: growth
+  cold_start: true
+  users:
+    admin:
+      email: admin@company2.com
+      password_env: COMPANY2_ADMIN_PASSWORD
+      display_name: Arjun Admin
+    employee:
+      email: user@company2.com
+      password_env: COMPANY2_EMPLOYEE_PASSWORD
+      display_name: Sara Employee

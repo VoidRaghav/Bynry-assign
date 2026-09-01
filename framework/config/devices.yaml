@@ -1,0 +1,48 @@
+smoke:
+  - name: "Chrome latest / Windows 11"
+    browser: chrome
+    browser_version: latest
+    os: Windows
+    os_version: "11"
+  - name: "iPhone 15 / iOS 17"
+    device: iPhone 15
+    os_version: "17"
+    real_mobile: true
+    emulate: iPhone 15
+
+nightly:
+  - name: "Chrome latest / Windows 11"
+    browser: chrome
+    browser_version: latest
+    os: Windows
+    os_version: "11"
+  - name: "Firefox latest / Windows 11"
+    browser: playwright-firefox
+    browser_version: latest
+    os: Windows
+    os_version: "11"
+  - name: "Safari / Ventura"
+    browser: playwright-webkit
+    browser_version: latest
+    os: OS X
+    os_version: Ventura
+  - name: "iPhone 15 / iOS 17"
+    device: iPhone 15
+    os_version: "17"
+    real_mobile: true
+    emulate: iPhone 15
+  - name: "iPhone 12 / iOS 15"
+    device: iPhone 12
+    os_version: "15"
+    real_mobile: true
+    emulate: iPhone 12
+  - name: "Samsung Galaxy S23 / Android 13"
+    device: Samsung Galaxy S23
+    os_version: "13.0"
+    real_mobile: true
+    emulate: Galaxy S24
+  - name: "Pixel 7 / Android 13"
+    device: Google Pixel 7
+    os_version: "13.0"
+    real_mobile: true
+    emulate: Pixel 7

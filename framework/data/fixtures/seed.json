@@ -1,0 +1,11 @@
+{
+  "company1": [
+    {"name": "Website Revamp", "description": "Marketing site rebuild", "status": "active", "team_members": ["manager@company1.com"]},
+    {"name": "Billing Migration", "description": "Move invoicing to the new ledger", "status": "active", "team_members": ["admin@company1.com", "employee@company1.com"]},
+    {"name": "Onboarding Flow", "description": "Reduce time to first project", "status": "archived", "team_members": []}
+  ],
+  "company2": [
+    {"name": "Warehouse Rollout", "description": "Second warehouse go live", "status": "active", "team_members": ["user@company2.com"]},
+    {"name": "Support Playbook", "description": "Tier one response templates", "status": "active", "team_members": []}
+  ]
+}
